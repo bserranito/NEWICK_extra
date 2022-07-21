@@ -39,9 +39,12 @@ Edge=d$edge
 
 # On extrait les premiers caracteres des noms
 Names=d$tip.label
-Names2=gsub("_.*", "", Names,perl=TRUE)
 
-#Names2=substr(Names, start = 1, stop = 3)
+# Species names match  the characters before underscore
+# Names2=gsub("_.*", "", Names,perl=TRUE)
+
+# Species name are the four first characters
+Names2=substr(Names, start = 1, stop = 4)
 
 
 # On identifie les niveaux terminaux
